@@ -4,35 +4,38 @@ __human_name__ = 'strings'
 
 # Add your code after this line
 
-goalScorerOne = "Ruud Gullit"
-goalScorerTwo = "Marco van Basten"
+goal_scorer_one = "Ruud Gullit"
+goal_scorer_two = "Marco van Basten"
 
-goalOne = '32nd'
-goalTwo = '54th'
+goal_0 = 32
+goal_1 = 54
 
-scorers = goalScorerOne +  str(goalOne) , goalScorerTwo +  str(goalTwo)
+scorers = goal_scorer_one +' '+  str(goal_0) , goal_scorer_two+' ' +  str(goal_1) 
 print(scorers)
 
 
-report = f"{goalScorerOne} scored in the {goalOne} minute\n {goalScorerTwo} scored in the {goalTwo} minute"
+report = f"{goal_scorer_one} scored in the {goal_0}nd minute\n {goal_scorer_two} scored in the {goal_1}th minute"
 print(report)
 
 
 player = "Ruud Gullit"
-first_name =  player[0:5]
+# player_two = "Wim Suvrijn"
+first_name = player[0:player.find(' ')]
 print(first_name)
+# first_name_two = player_two[0:player_two.find(' ')]
+# print(first_name_two)
 
-last_name = player[-6:]
-print(last_name)
 
-last_name_len = len(player[5:11])
-print(last_name_len)
+last_name_len = len(player[player.find(' ')+1:])
+print (last_name_len)
 
-name_short = player[0:1] +'.' +" "+ last_name
+name_short = player[0] + '.' + player[player.find(' '):]
 print(name_short)
 
-chant = 3*(first_name+"!") 
+chant = 3*(first_name+"! \t") 
 print(chant)
 
 
+good_chant = chant != " "
+print(good_chant)
 
